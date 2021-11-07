@@ -1,0 +1,55 @@
+
+
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 0.6rem;
+}
+
+.moviePoster {
+    width: 70%;
+    min-width: 40%;
+    height: auto;
+    box-shadow: 1px 3px 12px 5px rgb(11, 66, 11);
+    border: 1px solid rgb(117, 126, 99);
+}
+
+.movieName {
+    margin: 1.6rem 0;
+    padding: 0;
+    color: #fff;
+}
+
+.movieInfo {
+    color: #fff;
+    padding: 0.2rem 0;
+    text-transform: capitalize;
+}
+
+.customBtn {
+    padding: 0.4rem 1.6rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+    border: 1px solid cyan;
+    border-radius: 18px;
+    background-color: rgb(140, 210, 212);
+    transition: 0.2s;
+}
+
+
+#voteBtn {
+    background-color: rgb(144, 245, 43);
+    margin: 0.6rem 0;
+    padding: 0.5rem 1.8rem;
+}
+
+#voteBtn:hover {
+    background-color: yellowgreen;
+    transform: scale(1.1);
+}

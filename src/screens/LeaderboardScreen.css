@@ -1,0 +1,21 @@
+
+.page-title {
+    text-align: center;
+    color: lightslategrey;
+}
+
+.leaderboard-wrapper {
+    height: 90vh;
+    padding: 0.8rem 1rem;
+    overflow: auto;
+}
+
+.leaderboard-screen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0.8rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: black;
+}

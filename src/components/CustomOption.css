@@ -1,0 +1,23 @@
+.custom-option {
+    display: block;
+    width: 90%;
+    margin: 0.4rem auto;
+    padding: 1.2rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 8px;
+    transition: 0.1s;
+    border: 3px solid rgb(146, 184, 171);
+    background-color: rgb(146, 184, 171);
+}
+
+.custom-option:hover {
+    background-color: rgb(82, 179, 146);
+}
+
+.selected {
+    color: white;
+    background-color: rgb(56, 138, 111);
+    border: 3px solid rgb(56, 138, 111);
+}

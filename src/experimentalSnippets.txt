@@ -1,0 +1,145 @@
+// VOTESCREEN
+// ==============
+
+    // const baseURL = `https://api.themoviedb.org/3/movie/76341?api_key=${api_key}&language=${language}`; // example api dummy data
+    // const baseURL = `https://api.themoviedb.org/3/discover/movie?api_key=08d7db24695193b7c6dbdac9d5ac3933&language=en&sort_by=popularity.desc?&include_video=false&page=1&with_genres=27`;
+
+    // const { poster_path, title, vote_average, runtime, release_date, budget, revenue } = movieInfoFull.results[0];
+    // console.log(movieInfoFull.results[0]);
+    // setMovieData({ poster_path, title, vote_average, runtime, release_date, budget, revenue });
+
+    // // id={nextMovieData.id} // pass if necessary
+    // poster_path={fetchedMovieData.nextMovieData.poster_path}
+    // title={fetchedMovieData.nextMovieData.title}
+    // vote_average={fetchedMovieData.nextMovieData.vote_average}
+    // runtime={fetchedMovieData.nextMovieData.runtime}
+    // release_date={fetchedMovieData.nextMovieData.release_date}
+    // budget={fetchedMovieData.nextMovieData.budget}
+    // revenue={fetchedMovieData.nextMovieData.revenue}
+    // voteMovie={voteMovie}
+    
+
+    // import {unstable_batchedUpdates} from 'react-dom';
+
+    // const [movieList, setMovieList] = useState({});
+    // const [nextMovieData, setNextMovieData] = useState({});
+    // const [movieIndex, setMovieIndex] = useState(0);
+    // const [voteList, setVoteList] = useState({});
+
+    // unstable_batchedUpdates(() => {
+    //     // this wrapper fn makes both renderer process into single one
+    //     setMovieList(movieInfoFull);
+    //     setNextMovieData(movieList[movieIndex]);
+    //   });
+
+    // // effect as componentDidMount and componentDidUpdate
+    // const mounted = useRef();
+    // useEffect(() => {
+    //     if (!mounted.current) {
+    //         // componentDidMount logic
+
+    //         console.log('componentDidMount 1 !');
+    //         // console.log('list: ',movieList);
+
+    //         mounted.current = true;
+    //     } else {
+    //         // componentDidUpdate logic
+
+    //         console.log('component updated !');
+
+    //     }
+    // });
+
+
+// LANGUAGESCREEN
+// ==============
+
+
+MULTIPLE SELECTION
+
+
+  const [selectedlangg, setselectedlangg] = useState([]);
+
+  const getLangg = (langg, element) => {
+    element.classList.add('selected');
+    // remove repeating selection by set convertion hack
+    let updatedList = [...selectedlangg, langg];
+    updatedList = [...new Set(updatedList)];
+    console.log(updatedList);
+    setselectedlangg( updatedList );
+
+
+SINGLE SELECTION
+
+
+  const [selectedlangg, setselectedlangg] = useState({language: '', element: null});
+
+  const getLangg = (langg, element) => {
+    if(selectedlangg.element) selectedlangg.element.classList.remove('selected'); // only for just UI purpose
+    element.classList.add('selected');
+    // set language
+    setselectedlangg({
+      language: langg,
+      element: element
+    });
+  }
+
+
+// CUSTOMOPTION.css src > component > x
+// ==============
+
+.custom-option {
+    display: block;
+    width: 90%;
+    margin: 0.4rem auto;
+    padding: 1.2rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 8px;
+    border: 3px solid rgb(146, 184, 171);
+    background-color: rgb(146, 184, 171);
+}
+
+.custom-option:hover {
+    background-color: rgb(82, 179, 146);
+}
+
+.selected {
+    color: white;
+    background-color: rgb(56, 138, 111);
+    border: 3px solid rgb(56, 138, 111);
+}
+
+
+// GENRESCREEN.css src > 
+// ==============
+
+MULTIPLE SELECTION
+
+    action: 28, adventure: 12, animation: 16, comedy: 35, crime: 80, drama: 18, family: 10751, fantasy: 14, history: 36, horror: 27, mystery: 9648, romance: 10749, scifi: 878, thriller: 53, tvmovie: 10770, war: 10752, western: 37
+
+    const [selectedgenre, setselectedgenre] = useState([]);
+
+    const getGenre = (genre, element) => {
+        element.classList.add('selected');
+        // remove repeating selection by set convertion hack
+        let updatedList = [...selectedgenre, genre];
+        updatedList = [...new Set(updatedList)];
+        console.log(updatedList);
+        setselectedgenre( updatedList );
+    }
+
+SINGLE SELECTION
+
+    const [selectedgenre, setselectedgenre] = useState({genre: '', element: null});
+
+    const getGenre = (genre, element) => {
+        if(selectedgenre.element) selectedgenre.element.classList.remove('selected');
+        element.classList.add('selected'); // for UI
+        // set genre
+        setselectedgenre({
+            genre: genre,
+            element: element
+        });
+    }

@@ -1,0 +1,55 @@
+.page-title {
+    margin: 0.6rem 0;
+    padding: 0;
+    text-align: center;
+    color: lightslategrey;
+}
+
+.vote-screen {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 500;
+    color: #000;
+    background-color: black;
+}
+
+.movie-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 88vh;
+    width: 98vw;
+    margin: auto;
+    overflow: auto;
+    /* background-color: beige ; */
+}
+
+.customBtn {
+    padding: 0.4rem 1.6rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+    border: 1px solid cyan;
+    border-radius: 18px;
+    background-color: rgb(140, 210, 212);
+    transition: 0.2s;
+}
+
+#finishBtn {
+    width: 50%;
+    opacity: 0.6;
+    color: grey;
+}
+
+#finishBtn:hover{
+    opacity: 1;
+    color: black;
+    background-color: cyan;
+    border: 1px solid rgb(140, 210, 212);
+}
+
+.color-white { color: #fff; }

@@ -1,0 +1,26 @@
+.page-title {
+    text-align: center;
+    color: lightslategrey;
+}
+
+
+.genre-pref-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-height: 90vh;
+    height: 90vh;
+    padding: 0.8rem 1rem;
+    overflow: auto;
+}
+
+.genre-screen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 3rem;
+    font-weight: 500;
+    color: #000;
+    background-color: black;
+}
