@@ -1,6 +1,6 @@
 {
   "name": "movieSearch",
-  "homepage": "http://sadi-1010011.github.io/movieSearch",
+  "homepage": "https://moviesearch-delta.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
